@@ -1,19 +1,26 @@
-# Showcase edition boundary
+# Граница публичной версии
 
-This repository is a deliberately incomplete public showcase of KodoCashFlow v61.
+Этот репозиторий — намеренно неполная публичная витрина **KodoCashFlow v61**.
 
-## Why it is not runnable
+## Почему проект нельзя запустить целиком
 
-The public tree omits the canonical launcher and the commercial application core. It also excludes modules whose behavior or historical compatibility is part of the paid product and removes the behavior-defining test suite to avoid turning the public repository into a reconstruction specification.
+Из публичного дерева исключены основной launcher и коммерческое ядро приложения. Также не публикуются модули, поведение которых относится к платной версии, историческая compatibility-логика и тесты, способные превратить репозиторий в спецификацию для восстановления закрытой реализации.
 
-## What the public source is for
+## Для чего опубликован исходный код
 
-The visible source is intended to demonstrate architecture, code organization, infrastructure decisions, Pterodactyl/container tooling, SQLite maintenance patterns, typed contracts and selected reusable components.
+Публичная часть предназначена для демонстрации:
 
-## Full edition
+- архитектуры проекта;
+- организации кода;
+- инфраструктурных решений;
+- работы с Pterodactyl и контейнерными ресурсами;
+- подходов к обслуживанию SQLite;
+- typed contracts и отдельных переиспользуемых компонентов.
 
-The complete runnable package is sold directly by the author.
+## Полная версия
 
-- **Price:** $20
+Полная рабочая сборка продаётся напрямую автором.
+
+- **Цена:** $20
 - **Telegram:** [@KodoDrive](https://t.me/KodoDrive)
-- **Product:** KodoCashFlow v61
+- **Продукт:** KodoCashFlow v61

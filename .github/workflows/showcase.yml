@@ -1,4 +1,4 @@
-name: Showcase validation
+name: Проверка публичной витрины
 
 on:
   push:
@@ -11,15 +11,15 @@ jobs:
   compile:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Получить репозиторий
         uses: actions/checkout@v4
-      - name: Set up Python
+      - name: Установить Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Compile public sources
+      - name: Проверить компиляцию публичного кода
         run: python -m compileall -q cashflow
-      - name: Confirm commercial entrypoint is absent
+      - name: Убедиться, что коммерческие файлы отсутствуют
         run: |
           test ! -e main.py
           test ! -e v49.py

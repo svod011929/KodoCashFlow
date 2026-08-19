@@ -1,11 +1,15 @@
-# Security
+# Безопасность
 
-## Secrets
+## Секреты и конфигурация
 
-Never commit a real `.env`, Telegram bot token, provider API key, webhook secret, panel credential or runtime secret store. The configuration under `config/example.env` contains placeholders only.
+Никогда не публикуйте реальные `.env`, токены Telegram-бота, API-ключи провайдеров, webhook secrets, данные доступа к панели или runtime-хранилищу секретов.
 
-## Reporting a problem
+Файл `config/example.env` содержит только безопасные примеры и пустые значения.
 
-For security or commercial-build questions, contact **[@KodoDrive](https://t.me/KodoDrive)** privately.
+## Сообщить о проблеме
 
-Please do not publish real credentials in GitHub issues.
+Если вы нашли потенциальную уязвимость или хотите задать вопрос по коммерческой сборке, свяжитесь с автором приватно:
+
+**Telegram:** [@KodoDrive](https://t.me/KodoDrive)
+
+Не публикуйте реальные токены, пароли и другие секреты в GitHub Issues.

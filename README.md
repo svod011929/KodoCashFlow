@@ -2,78 +2,103 @@
 
 # 💸 KodoCashFlow v61
 
-### Telegram automation platform · Pterodactyl-ready · SQLite-first
+### Платформа автоматизации Telegram · готова для Pterodactyl · SQLite-first
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
-![Version](https://img.shields.io/badge/version-v61-7c3aed)
-![Edition](https://img.shields.io/badge/edition-showcase-f59e0b)
+![Версия](https://img.shields.io/badge/version-v61-7c3aed)
 ![Pterodactyl](https://img.shields.io/badge/Pterodactyl-local%20monitoring-0ea5e9)
-[![Telegram](https://img.shields.io/badge/Buy%20full%20version-%40KodoDrive-26A5E4?logo=telegram&logoColor=white)](https://t.me/KodoDrive)
+[![Telegram](https://img.shields.io/badge/%D0%9A%D1%83%D0%BF%D0%B8%D1%82%D1%8C-%40KodoDrive-26A5E4?logo=telegram&logoColor=white)](https://t.me/KodoDrive)
 
-**Public showcase edition. The runnable commercial core is intentionally not published.**
+**Публичная витрина проекта. Рабочее коммерческое ядро намеренно не публикуется.**
 
-### 💵 Full runnable version — **$20**
-### 📩 Purchase / support: **[@KodoDrive](https://t.me/KodoDrive)**
+### 💵 Полная рабочая версия — **$20**
+### 📩 Покупка и связь: **[@KodoDrive](https://t.me/KodoDrive)**
 
 </div>
 
 ---
 
-## What is KodoCashFlow?
+## 🚀 Что такое KodoCashFlow?
 
-KodoCashFlow is a production-oriented Telegram automation platform built for long-running deployment inside **Pterodactyl containers**. Version 61 focuses on local resource visibility without requiring the Pterodactyl Client API, durable SQLite storage, safe cleanup, modular providers, background workers, notifications and operational tooling.
+**KodoCashFlow** — production-ориентированная платформа автоматизации Telegram, рассчитанная на длительную работу внутри контейнеров **Pterodactyl**. Версия **v61** делает упор на локальный мониторинг ресурсов без обязательного доступа к Pterodactyl Client API, надёжное хранение данных в SQLite, фоновые задачи, уведомления, обслуживание хранилища и модульную архитектуру интеграций.
 
-This repository is intentionally a **showcase / architecture edition**. It demonstrates the project structure and a meaningful part of the infrastructure while keeping the commercial implementation private.
+Этот репозиторий — **публичная витрина архитектуры и качества кода**. Здесь опубликована только безопасная часть проекта, достаточная для знакомства с подходом к разработке, но недостаточная для запуска полноценного продукта или восстановления коммерческой сборки.
 
 > [!IMPORTANT]
-> This repository **cannot be started as a complete bot**. The canonical launcher and proprietary core modules are deliberately excluded. The complete runnable package is available from **@KodoDrive for $20**.
+> Этот репозиторий **нельзя запустить как полноценного бота**. Основной файл запуска, центральное коммерческое ядро и ряд критичных модулей намеренно исключены. Полная рабочая сборка доступна у **@KodoDrive за $20**.
 
-## ✨ Highlights of the full version
+## ✨ Возможности полной версии
 
-- 🤖 Telegram bot architecture based on `aiogram`
-- 🧩 Modular handlers, repositories and provider registry
-- 💾 SQLite-first persistence with WAL-aware maintenance
-- 🧹 Automated storage cleanup and retention policies
-- 🦅 Local Pterodactyl resource monitoring through cgroup v1/v2
-- 📊 Runtime profiles tuned for low / balanced / high-resource containers
-- 🔔 Durable notification and background-task infrastructure
-- 💰 Financial helpers, payout workflows and operational safeguards
-- 🔐 Secret storage separated from the database
-- 🌐 HTTP runtime and external integration layer
-- 🔄 Versioned database migrations and backward-compatibility tooling
+- 🤖 Telegram-бот на базе `aiogram`
+- 🧩 модульные handlers, repositories и registry провайдеров
+- 💾 SQLite-first хранение данных с поддержкой WAL
+- 🧹 автоматическая очистка хранилища и retention-политики
+- 🦅 локальный мониторинг ресурсов Pterodactyl через cgroup v1/v2
+- 📊 профили работы для слабых, средних и мощных контейнеров
+- 🔔 надёжная инфраструктура фоновых задач и уведомлений
+- 💰 финансовая логика, выплаты и защитные механизмы
+- 🔐 отделение секретов от основной базы данных
+- 🌐 HTTP runtime и слой внешних интеграций
+- 🔄 версионируемые миграции БД и обратная совместимость
+- 🛠 инструменты обслуживания и диагностики для production-среды
 
 ## 🦅 Pterodactyl v61
 
-The v61 runtime can read container limits locally instead of depending on panel API credentials. Depending on the host, it can inspect RAM and swap usage, CPU quota / cpuset information, PID limits, OOM counters, cumulative CPU usage and project disk usage.
+KodoCashFlow v61 умеет получать фактически применённые ограничения контейнера **локально**, не требуя ключа панели. В зависимости от окружения приложение может определять:
 
-## 📦 Public showcase
+- использование и лимит RAM;
+- swap;
+- CPU quota и cpuset;
+- PID limits;
+- OOM / OOM-kill counters;
+- накопленное использование CPU;
+- объём данных проекта на диске.
 
-This repository contains selected architecture, configuration, infrastructure and technical documentation. It intentionally omits the canonical launcher, central application core, legacy compatibility logic, sensitive payout/access workflows, provider implementations and behavior-defining test suite.
+Это особенно удобно для shared-hosting, где доступ к Pterodactyl Panel API отсутствует или ограничен.
 
-The repository is therefore a technical showcase, **not a free runnable distribution**.
+## 📦 Что опубликовано
 
-## 🛒 Get the full version
+В публичной версии оставлены выбранные части архитектуры, конфигурации, SQLite-инфраструктуры, runtime/HTTP-слоя, maintenance-модулей и технической документации.
 
-The complete build includes the missing commercial files, real launch path, provider implementations, compatibility logic, tests and full deployment configuration.
+Они позволяют оценить стиль кода, организацию проекта и инженерные решения без публикации коммерчески значимого ядра.
+
+## 🔒 Что не публикуется
+
+Из публичной версии намеренно исключены:
+
+- основной путь запуска приложения;
+- центральное коммерческое ядро;
+- критичная бизнес-логика доступа и выплат;
+- полные реализации провайдеров;
+- историческая compatibility-логика;
+- тесты, по которым можно восстановить поведение закрытых модулей;
+- полная production-конфигурация.
+
+Поэтому этот репозиторий является **витриной**, а не бесплатной рабочей сборкой.
+
+## 🛒 Полная версия
+
+Полная версия включает отсутствующие коммерческие модули, реальный запускной путь, реализации интеграций, compatibility-логику, тесты и полноценную конфигурацию для развёртывания.
 
 <div align="center">
 
-### **Price: $20**
-### Telegram: **[@KodoDrive](https://t.me/KodoDrive)**
+### 💵 **Цена: $20**
+### 📩 Telegram: **[@KodoDrive](https://t.me/KodoDrive)**
 
-When contacting me, mention **KodoCashFlow v61**.
+При обращении укажите: **KodoCashFlow v61**.
 
 </div>
 
-## 🧱 Technology
+## 🧱 Технологии
 
 - Python 3.10+
 - aiogram
 - aiohttp
 - aiosqlite / SQLite
-- Pterodactyl-compatible Linux containers
+- Linux cgroup v1/v2
+- Pterodactyl-compatible containers
 
-## 👤 Author
+## 👤 Автор
 
 **KodoDrive**  
 GitHub: **[@svod011929](https://github.com/svod011929)**  
@@ -83,7 +108,7 @@ Telegram: **[@KodoDrive](https://t.me/KodoDrive)**
 
 <div align="center">
 
-**KodoCashFlow v61 · Showcase Edition**  
-Full runnable package: **$20 via @KodoDrive**
+**KodoCashFlow v61 · Публичная витрина**  
+Полная рабочая версия: **$20 через @KodoDrive**
 
 </div>

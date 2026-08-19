@@ -1,7 +1,12 @@
-# Copyright and commercial notice
+# Авторские права и коммерческое использование
 
-Copyright © 2026 KodoDrive. All rights reserved.
+Copyright © 2026 KodoDrive. Все права защищены.
 
-This repository is a source-visible showcase. Publication of selected files does not grant permission to redistribute the complete commercial product, impersonate the author, resell private source files, or represent an incomplete reconstruction as an official KodoCashFlow release.
+Этот репозиторий опубликован как публичная витрина исходного кода и архитектуры проекта. Публикация отдельных файлов не означает передачу прав на распространение полной коммерческой версии, перепродажу закрытого исходного кода, выдачу себя за автора или публикацию восстановленной неполной сборки как официального релиза KodoCashFlow.
 
-The complete runnable KodoCashFlow v61 package is available from **@KodoDrive** on Telegram for **$20**.
+Полная рабочая сборка **KodoCashFlow v61** доступна напрямую у автора:
+
+- **Цена:** $20
+- **Telegram:** [@KodoDrive](https://t.me/KodoDrive)
+
+Для покупки или вопросов по коммерческой версии пишите в Telegram.
