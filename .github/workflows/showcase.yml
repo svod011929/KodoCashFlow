@@ -1,0 +1,27 @@
+name: Showcase validation
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile public sources
+        run: python -m compileall -q cashflow
+      - name: Confirm commercial entrypoint is absent
+        run: |
+          test ! -e main.py
+          test ! -e v49.py
+          test ! -e cashflow/application.py
+          test ! -e cashflow/migrations/legacy.py
