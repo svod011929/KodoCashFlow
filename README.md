@@ -6,49 +6,134 @@
 
 <br/>
 
+<div align="center">
+  <img src="./assets/readme-meta.svg" width="100%" alt="meta" />
+</div>
+
+<br/>
+
 <p align="center">
   <a href="https://github.com/svod011929/KodoCashFlow"><img src="https://img.shields.io/badge/GitHub-KodoCashFlow-0D1117?style=for-the-badge&logo=github&logoColor=34D399" alt="repo" /></a>
-  &nbsp;
   <a href="https://t.me/KodoDrive"><img src="https://img.shields.io/badge/Telegram-@KodoDrive-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="tg" /></a>
-  &nbsp;
   <a href="https://github.com/svod011929"><img src="https://img.shields.io/badge/Author-svod011929-7C3AED?style=for-the-badge&logo=github&logoColor=white" alt="author" /></a>
 </p>
 
----
-
-<div align="center">
-  <img src="./assets/readme-about.svg" width="100%" alt="about" />
-</div>
-
-<br/>
-
-<div align="center">
-  <img src="./assets/readme-features.svg" width="100%" alt="features" />
-</div>
-
----
-
-## Быстрый старт
-
-```bash
-git clone https://github.com/svod011929/KodoCashFlow.git
-cd KodoCashFlow
-# см. файлы проекта и продолжай установку под своё окружение
-```
-
----
-
-<div align="center">
-  <img src="./assets/readme-stack.svg" width="100%" alt="stack" />
-</div>
-
-<br/>
-
-<div align="center">
-  <a href="https://t.me/KodoDrive"><img src="./assets/readme-cta.svg" width="100%" alt="contact" /></a>
-</div>
-
 <!-- /kododrive-readme-style -->
+
+<div align="center">
+
+# 💸 KodoCashFlow v61
+
+### Платформа автоматизации Telegram · готова для Pterodactyl · SQLite-first
+
+[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+![Версия](https://img.shields.io/badge/version-v61-7c3aed)
+![Pterodactyl](https://img.shields.io/badge/Pterodactyl-local%20monitoring-0ea5e9)
+[![Telegram](https://img.shields.io/badge/%D0%9A%D1%83%D0%BF%D0%B8%D1%82%D1%8C-%40KodoDrive-26A5E4?logo=telegram&logoColor=white)](https://t.me/KodoDrive)
+
+**Публичная витрина проекта. Рабочее коммерческое ядро намеренно не публикуется.**
+
+### 💵 Полная рабочая версия — **$20**
+### 📩 Покупка и связь: **[@KodoDrive](https://t.me/KodoDrive)**
+
+</div>
+
+---
+
+## 🚀 Что такое KodoCashFlow?
+
+**KodoCashFlow** — production-ориентированная платформа автоматизации Telegram, рассчитанная на длительную работу внутри контейнеров **Pterodactyl**. Версия **v61** делает упор на локальный мониторинг ресурсов без обязательного доступа к Pterodactyl Client API, надёжное хранение данных в SQLite, фоновые задачи, уведомления, обслуживание хранилища и модульную архитектуру интеграций.
+
+Этот репозиторий — **публичная витрина архитектуры и качества кода**. Здесь опубликована только безопасная часть проекта, достаточная для знакомства с подходом к разработке, но недостаточная для запуска полноценного продукта или восстановления коммерческой сборки.
+
+> [!IMPORTANT]
+> Этот репозиторий **нельзя запустить как полноценного бота**. Основной файл запуска, центральное коммерческое ядро и ряд критичных модулей намеренно исключены. Полная рабочая сборка доступна у **@KodoDrive за $20**.
+
+## ✨ Возможности полной версии
+
+- 🤖 Telegram-бот на базе `aiogram`
+- 🧩 модульные handlers, repositories и registry провайдеров
+- 💾 SQLite-first хранение данных с поддержкой WAL
+- 🧹 автоматическая очистка хранилища и retention-политики
+- 🦅 локальный мониторинг ресурсов Pterodactyl через cgroup v1/v2
+- 📊 профили работы для слабых, средних и мощных контейнеров
+- 🔔 надёжная инфраструктура фоновых задач и уведомлений
+- 💰 финансовая логика, выплаты и защитные механизмы
+- 🔐 отделение секретов от основной базы данных
+- 🌐 HTTP runtime и слой внешних интеграций
+- 🔄 версионируемые миграции БД и обратная совместимость
+- 🛠 инструменты обслуживания и диагностики для production-среды
+
+## 🦅 Pterodactyl v61
+
+KodoCashFlow v61 умеет получать фактически применённые ограничения контейнера **локально**, не требуя ключа панели. В зависимости от окружения приложение может определять:
+
+- использование и лимит RAM;
+- swap;
+- CPU quota и cpuset;
+- PID limits;
+- OOM / OOM-kill counters;
+- накопленное использование CPU;
+- объём данных проекта на диске.
+
+Это особенно удобно для shared-hosting, где доступ к Pterodactyl Panel API отсутствует или ограничен.
+
+## 📦 Что опубликовано
+
+В публичной версии оставлены выбранные части архитектуры, конфигурации, SQLite-инфраструктуры, runtime/HTTP-слоя, maintenance-модулей и технической документации.
+
+Они позволяют оценить стиль кода, организацию проекта и инженерные решения без публикации коммерчески значимого ядра.
+
+## 🔒 Что не публикуется
+
+Из публичной версии намеренно исключены:
+
+- основной путь запуска приложения;
+- центральное коммерческое ядро;
+- критичная бизнес-логика доступа и выплат;
+- полные реализации провайдеров;
+- историческая compatibility-логика;
+- тесты, по которым можно восстановить поведение закрытых модулей;
+- полная production-конфигурация.
+
+Поэтому этот репозиторий является **витриной**, а не бесплатной рабочей сборкой.
+
+## 🛒 Полная версия
+
+Полная версия включает отсутствующие коммерческие модули, реальный запускной путь, реализации интеграций, compatibility-логику, тесты и полноценную конфигурацию для развёртывания.
+
+<div align="center">
+
+### 💵 **Цена: $20**
+### 📩 Telegram: **[@KodoDrive](https://t.me/KodoDrive)**
+
+При обращении укажите: **KodoCashFlow v61**.
+
+</div>
+
+## 🧱 Технологии
+
+- Python 3.10+
+- aiogram
+- aiohttp
+- aiosqlite / SQLite
+- Linux cgroup v1/v2
+- Pterodactyl-compatible containers
+
+## 👤 Автор
+
+**KodoDrive**  
+GitHub: **[@svod011929](https://github.com/svod011929)**  
+Telegram: **[@KodoDrive](https://t.me/KodoDrive)**
+
+---
+
+<div align="center">
+
+**KodoCashFlow v61 · Публичная витрина**  
+Полная рабочая версия: **$20 через @KodoDrive**
+
+</div>
 
 ---
 
@@ -56,21 +141,21 @@ cd KodoCashFlow
 
 ## Проекты KodoDrive
 
-Другие проекты: [профиль @svod011929](https://github.com/svod011929) · [Telegram](https://t.me/KodoDrive)
+Другие проекты автора: [профиль @svod011929](https://github.com/svod011929) · [Telegram](https://t.me/KodoDrive)
 
 ### VPN и инфраструктура
 
-- [BuryatVPN](https://github.com/svod011929/buryatvpn)
-- [VPN Server Installer](https://github.com/svod011929/vpn-server-installer)
+- [BuryatVPN — VPN-сервис + Telegram](https://github.com/svod011929/buryatvpn)
+- [VPN Server Installer — VLESS + TLS](https://github.com/svod011929/vpn-server-installer)
 - [3X-UI Auto Installer](https://github.com/svod011929/3x-ui-auto-installer)
-- [AWG Bot Installer](https://github.com/svod011929/awg-bot-installer)
+- [AWG Bot Installer — AmneziaWG](https://github.com/svod011929/awg-bot-installer)
 - [RemnaShop Installer](https://github.com/svod011929/remnashop-installer)
-- [VPN Auto Installer](https://github.com/svod011929/vpn-auto-installer)
-- [VPNHubBot](https://github.com/svod011929/VPNHubBot)
+- [VPN Auto Installer — панели](https://github.com/svod011929/vpn-auto-installer)
+- [VPNHubBot — Telegram VPN-бот](https://github.com/svod011929/VPNHubBot)
 
 ### Telegram и автоматизация
 
-- [KDS Server Panel](https://github.com/svod011929/KDS_Server_Panel)
+- [KDS Server Panel — SSH из Telegram](https://github.com/svod011929/KDS_Server_Panel)
 - [Telegram → VK Poster](https://github.com/svod011929/telegram-to-vk-poster)
 - [KDS Parser CryptoBot](https://github.com/svod011929/kds_parser_cryptobot)
 - [Auction Bot](https://github.com/svod011929/auction-bot)
@@ -86,8 +171,7 @@ cd KodoCashFlow
 
 ### Сайты
 
-- [Portfolio](https://github.com/svod011929/kododrive-portfolio)
-- [GitHub Pages](https://github.com/svod011929/kododrive.github.io)
+- [KodoDrive Portfolio](https://github.com/svod011929/kododrive-portfolio)
+- [kododrive.github.io](https://github.com/svod011929/kododrive.github.io)
 
 <!-- /kododrive-projects-block -->
-
